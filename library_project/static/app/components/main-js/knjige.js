@@ -1,5 +1,5 @@
 export default {
-    template:`
+    template: `
 <div class="w-75 p-3">
     <tabela-knjiga v-bind:naslov="'Tabela knjiga'" v-bind:knjige="knjige" v-on:uklanjanje="removeKnjiga" v-on:izmena="setKnjigaZaIzmenu"></tabela-knjiga>
 </div>
@@ -10,21 +10,21 @@ export default {
     <knjiga-form v-on:sacuvaj="createKnjiga" v-bind:biblioteke="biblioteke" v-bind:naslov="'Dodaj knjigu'" v-bind:dugme="'Dodaj'"></knjiga-form>
 </div>
     `,
-    data(){
+    data() {
         return {
-            knjige:[],
-            biblioteke:[], ///Select opcija
-            knjigaZaIzmenu:{},
+            knjige: [],
+            biblioteke: [], ///Select opcija
+            knjigaZaIzmenu: {},
 
             stranicaZaPrikaz: "",
         }
     },
-    methods:{
-        setKnjigaZaIzmenu(knjiga){ //skladistenje nakon izmene//
+    methods: {
+        setKnjigaZaIzmenu(knjiga) { //skladistenje nakon izmene//
             this.$router.push(`/knjige/${knjiga.IDKnjiga}`);
         },
 
-        refreshKnjiga(){
+        refreshKnjiga() {
             axios.get("api/knjige").then((response) => {
                 this.knjige = response.data;
             });
@@ -35,32 +35,32 @@ export default {
         },
 
         //dodavanje//
-        createKnjiga(knjiga){
+        createKnjiga(knjiga) {
             axios.post("api/knjige", knjiga).then((response) => {
                 this.refreshKnjiga();
             });
         },
 
         //izmena//
-        updateKnjiga(knjiga){
+        updateKnjiga(knjiga) {
             axios.put(`api/knjige/${knjiga.IDKnjiga}`, knjiga).then((response) => {
                 this.refreshKnjiga();
             });
         },
 
         //brisanje//
-        removeKnjiga(IDKnjiga){
+        removeKnjiga(IDKnjiga) {
             axios.delete(`api/knjige/${IDKnjiga}`).then((response) => {
                 this.refreshKnjiga();
             });
         },
-        
-        navigate(page){
+
+        navigate(page) {
             this.stranicaZaPrikaz = page;
         }
 
     },
-    created(){
+    created() {
         this.refreshKnjiga();
     }
 }
