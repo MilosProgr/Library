@@ -2,7 +2,7 @@ import flask
 from flask import Blueprint
 from flask import session
 
-from utils.db import mysql
+from server.utils.db import mysql
 
 
 logout_blueprint=Blueprint("logout_blueprint", __name__)

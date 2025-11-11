@@ -1,5 +1,5 @@
 export default {
-    template: `
+  template: `
     <!-- Background image -->
     <br>
     <div class="row">
@@ -36,7 +36,6 @@ export default {
        </div>
        </div>
        <div class="lil">
-            <a class="btn btn-success" href="https://trollface.dk/">Click for a free Iphone</a>      
        </div>
     
         

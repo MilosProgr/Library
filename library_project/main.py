@@ -2,22 +2,22 @@ import flask
 from flask import Flask
 from flask import session
 
-from utils.db import mysql
+from server.utils.db import mysql
 
-from blueprints.login_blueprint import login_blueprint
-from blueprints.login_blueprint import loginBibliotekar_blueprint
-from blueprints.logout_blueprint import logout_blueprint
-from blueprints.logout_blueprint import logoutBibliotekar_blueprint
+from  server.blueprints.login_blueprint import login_blueprint
+from  server.blueprints.login_blueprint import loginBibliotekar_blueprint
+from  server.blueprints.logout_blueprint import logout_blueprint
+from  server.blueprints.logout_blueprint import logoutBibliotekar_blueprint
 
-from blueprints.bibliotekar_blueprint import bibliotekar_blueprint
-from blueprints.korisnik_blueprint import korisnik_blueprint
-from blueprints.kupac_blueprint import kupac_blueprint
-from blueprints.knjiga_blueprint import knjiga_blueprint
-from blueprints.biblioteka_blueprint import biblioteka_blueprint
-from blueprints.porudzbina_blueprint import porudzbina_blueprint
-from blueprints.iznajmljivanje_blueprint import iznajmljivanje_blueprint
+from  server.blueprints.bibliotekar_blueprint import bibliotekar_blueprint
+from  server.blueprints.korisnik_blueprint import korisnik_blueprint
+from  server.blueprints.kupac_blueprint import kupac_blueprint
+from  server.blueprints.knjiga_blueprint import knjiga_blueprint
+from  server.blueprints.biblioteka_blueprint import biblioteka_blueprint
+from  server.blueprints.porudzbina_blueprint import porudzbina_blueprint
+from  server.blueprints.iznajmljivanje_blueprint import iznajmljivanje_blueprint
 
-app = Flask(__name__, static_url_path="/")
+app = Flask(__name__, static_folder="client/static",static_url_path="/")
 
 ###TODO: Uradi search filtriranje
 
