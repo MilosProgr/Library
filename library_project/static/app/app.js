@@ -1,3 +1,10 @@
+import { createApp } from 'vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+
+// dalje tvoj kod...
+
 ///Import tabela i formi
 
 //Korisnik
@@ -67,48 +74,48 @@ import PregledBiblioteke from './components/review/viewBiblioteka.js'
 
 
 ///Rutiranje entiteta
-const router = VueRouter.createRouter({
-    history: VueRouter.createWebHashHistory(),
+const router = createRouter({
+    history: createWebHashHistory(),
     routes: [
-        {path: "/", component: Login},///Prikaz za stranice
-        {path: "/logout", component: Logout},///Prikaz za stranice
+        { path: "/", component: Login },///Prikaz za stranice
+        { path: "/logout", component: Logout },///Prikaz za stranice
 
-        {path: "/loginBibliotekar", component: LoginBibliotekar},///Prikaz za stranice
-        {path: "/logoutBibliotekar", component: LogoutBibliotekar},///Prikaz za stranice
+        { path: "/loginBibliotekar", component: LoginBibliotekar },///Prikaz za stranice
+        { path: "/logoutBibliotekar", component: LogoutBibliotekar },///Prikaz za stranice
 
 
-        {path: "/korisnici", component: Korisnici},///Prikaz za stranice
-        {path: "/korisnici/:IDKorisnik", component: KorisnikId},//Pojedinacan prikaz
+        { path: "/korisnici", component: Korisnici },///Prikaz za stranice
+        { path: "/korisnici/:IDKorisnik", component: KorisnikId },//Pojedinacan prikaz
 
-        {path: "/kupci", component: Kupci},///Prikaz za stranice
-        {path: "/kupci/:IDKupac", component: KupacId},//Pojedinacan prikaz
+        { path: "/kupci", component: Kupci },///Prikaz za stranice
+        { path: "/kupci/:IDKupac", component: KupacId },//Pojedinacan prikaz
 
-        {path: "/knjige", component: Knjige},///Prikaz za stranice
-        {path: "/knjige/:IDKnjiga", component: KnjigId},//Pojedinacan prikaz
+        { path: "/knjige", component: Knjige },///Prikaz za stranice
+        { path: "/knjige/:IDKnjiga", component: KnjigId },//Pojedinacan prikaz
 
-        {path: "/iznajmljivanje", component: Iznajmljivanja},///Prikaz za stranice
-        {path: "/iznajmljivanje/:IDIznajmljivanje", component: IznajmljivanjeId},//Pojedinacan prikaz
+        { path: "/iznajmljivanje", component: Iznajmljivanja },///Prikaz za stranice
+        { path: "/iznajmljivanje/:IDIznajmljivanje", component: IznajmljivanjeId },//Pojedinacan prikaz
 
-        {path: "/porudzbine", component: Porudzbine},///Prikaz za stranice
-        {path: "/porudzbine/:IDPorudzbina", component: PorudzbinaId},//Pojedinacan prikaz
+        { path: "/porudzbine", component: Porudzbine },///Prikaz za stranice
+        { path: "/porudzbine/:IDPorudzbina", component: PorudzbinaId },//Pojedinacan prikaz
 
         ///Dodata tabela za odaber i podatke
-        {path: "/biblioteke", component:Biblioteke },///Prikaz za stranice
-        {path: "/biblioteke/:id", component: BibliotekId},//Pojedinacan prikaz
-        
-        ///Bibliotekar
-        {path: "/bibliotekari", component:Bibliotekari },///Prikaz za stranice //Nije prikazano
+        { path: "/biblioteke", component: Biblioteke },///Prikaz za stranice
+        { path: "/biblioteke/:id", component: BibliotekId },//Pojedinacan prikaz
 
-    
+        ///Bibliotekar
+        { path: "/bibliotekari", component: Bibliotekari },///Prikaz za stranice //Nije prikazano
+
+
         ///review-stranice za pregled
-        {path: "/pregledBiblioteke", component:PregledBiblioteke },///Prikaz za stranice
+        { path: "/pregledBiblioteke", component: PregledBiblioteke },///Prikaz za stranice
 
         //O nama
-        {path: "/o_nama", component:O_nama},
+        { path: "/o_nama", component: O_nama },
     ],
 });
 
-const app = Vue.createApp({});
+const app = createApp({})
 app.component('tabela-korisnika', TabelaKorisnika);
 app.component('korisnik-form', KorisnikForma);
 
