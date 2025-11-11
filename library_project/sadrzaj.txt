@@ -1,0 +1,13 @@
+Radni materijali:
+-Mysql baza
+-HTML
+-Css
+-js components
+-Python
+-flask
+-Vue.js
+-VueRoute
+-Axios
+-RestApi
+-Session login
+

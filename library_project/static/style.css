@@ -1,0 +1,118 @@
+table, th, td, tr {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+  
+}
+tr:nth-child(even){
+    background-color: gray;
+}
+button{
+    margin-left: 20px;
+}
+label, input{
+    margin-left: 10px;
+}
+#boja{
+    color: white;
+}
+.container{
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000;
+    
+    
+    
+}
+.ceca{
+    text-align: center;
+    display: inline-block;
+    margin-left: 150px;
+    
+}
+
+.bg{
+    background:  url('./pictures/polica1.jpg');
+}
+.navs{
+    background: url('./pictures/knjiga.jpg');
+}
+.bgPage{
+    background-color:lavender;
+}
+.bgCustomer{
+    background: linear-gradient(rgba(42, 42, 53, 0.212), rgba(55, 58, 71, 0.199)), url('./pictures/biblioteka1.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+h2{
+    text-align: center;
+    color: whitesmoke
+}
+.fond{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: #fff;
+}
+.placeh{
+    margin: 5px 0 10px;
+    color: #000;
+    font-size: 15px;
+}
+.lil{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+    
+}
+.sizes{
+    font-size: 30px;
+}
+.navsis{
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    word-wrap: break-word;
+}
+li.saus:hover, a.saus:active {
+    font-family: monospace;
+    background-color: skyblue;
+    transition: 0.5s;
+}
+
+li.sius:hover{
+    background-color: #DEB887;
+    transition: 0.5s;
+
+}
+    
+input:required:valid {
+    border-color: green;
+}
+input:invalid {
+    border-color: brown;
+}
+input:required:focus:valid {
+    background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+    background-size: 25px;
+}
+input:focus:invalid {
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+    background-size: 25px;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+.tekst{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+}
+
+@media(max-width: 700px){
+    
+}

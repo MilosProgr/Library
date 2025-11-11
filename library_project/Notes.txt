@@ -1,0 +1,12 @@
+- Dodao sam bibliotekara i uveo mu dozvolu za upravljanje knjigama i i bibliotekarima.
+- Prilikom ulogovanja bibliotekara baca ga na stranicu knjiga.
+- Nisam nigde prikazivao entitete bibliotekara samo sam ih definisao na serveru i napravio componenete.
+- 08.06. Pozadina u boji. Uradjen dijagram zahteva u Astahu********
+- 09.06. Uraditi Blueprint za svaki entitet (blueprints, utils)***** 
+- 10.06. Bootstrap
+- 11/12.06.  Search filtriranje X / UseCase*
+- 13.06. Dozvole "import session" * / Specifikacija **
+- Search ???
+* 19.06. Odbrana projekta - 30 bodova.
+
+-Drago pretraga(knjiga) -> Dodati klijentsku stranu i rutu.
